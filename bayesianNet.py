@@ -12,7 +12,7 @@ def getModelAndData(infile, train_percent=.4):
 	trainData, testDataFull = train_test_split(allData, train_size=train_percent)
 	devData, testData = train_test_split(testDataFull, train_size=0.5)
 
-	# LaPlace smoothing - add 1 fraud, 1 not fraud for every 
+	# Laplace smoothing - add 1 fraud, 1 not fraud for every 
 	columnVals = []
 	for col in allData:
 		columnVals.append(allData[col].unique().tolist())
